@@ -1,4 +1,6 @@
-
+from flask import Flask
+app = Flask(__name__)
+a1="""
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -155,4 +157,9 @@ $(function () {
     </script>
 <script src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
 </body>
-</html>
+</html>"""
+@app.route('/')
+def index():
+   return a1
+if __name__ == '__main__':
+   app.run(debug = True)
